@@ -1,0 +1,53 @@
+.letra{
+    background-color: violet;
+}
+
+.container{
+    height: 839px;
+    width: 1025px;
+    border-radius: 0px;
+    background-color: green;
+}
+
+.imagem{
+    height: 466.6666564941406px;
+    width: 400px;
+    border-radius: 0px;
+    background-color: brown;
+}
+
+.botoes{
+    width: 1025;
+    background-color: yellow;
+}
+
+.jogo{
+    background-color: blue;
+}
+
+.botaoletra{
+    height: 40px;
+    width: 40px;
+    border-radius: nullpx;
+    background-color: gray;
+}
+
+.botão{
+    height: 60px;
+    width: 200px;
+    border-radius: nullpx;
+    background-color: rgb(58, 128, 0);
+}
+
+.palavra{
+    height: 68px;
+    width: 308px;
+    border-radius: nullpx;
+    background-color: blueviolet;
+}
+
+.topo{
+    height: 600px;
+    width: 1025;
+    background-color:red ;
+}

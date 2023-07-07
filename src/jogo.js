@@ -4,10 +4,11 @@ export default function Jogo(props) {
     function iniciajogo(){
         let x = palavras.sort(()=>Math.random()-0.5)
         props.setpalavra(x[0]);
-        criapalavra()
+        criapalavra();
     } 
 
-    function criapalavra(){
+    function criapalavra(props){
+        console.log(props);
         for(let i=0; i< props.palavra.length; i++){
             props.settentativa([...props.tentativa, "_"]);
         }
@@ -15,9 +16,11 @@ export default function Jogo(props) {
 
 
     return (
-    <div class = 'jogo'>
-        <button class =  'botão' onClick={() => iniciajogo()}>escolher palavra</button>
-        <div class = 'palavra'>`${tentativa}`</div>
+    <div className = 'jogo'>
+        <button className =  'botão' onClick={() => iniciajogo()}>escolher palavra</button>
+        <div className = 'palavra'>
+            
+        </div>
     </div>  
 
     );}

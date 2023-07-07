@@ -4,15 +4,16 @@ const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m
 function letraFinalizada(){
 
   }
-
 return (
-    <ul class= 'botoes'>
-        {alfabeto.map( (letra, indice) => (
-            <li 
-                key={letra} 
-                class={`botaoletra ${props.resposta.includes(indice) ? 'finalizado' : ''}`} 
-                onClick={() => letraFinalizada(indice)}
-            ></li> ) 
+    <ul className= 'botoes'>
+        {alfabeto.map( (letra, i) => (
+            <li>
+                <button 
+                    key={letra} 
+                    className={`botaoletra ${props.resposta.includes(i)? 'finalizado' : ''}`} 
+                    onClick={() => letraFinalizada(i)}
+                >{letra}{}</button>
+            </li> ) 
         )} 
     </ul>
 );}

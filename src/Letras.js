@@ -1,9 +1,8 @@
-import { useState } from 'react';
-
 export default function Letras(props) {
     
     const alfabeto = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
     let i;
+    let acerto=0; //letras acertadas;
 
     function letraFinalizada(letraSelecionada){
         if(!props.resposta.includes(letraSelecionada)){
@@ -20,17 +19,16 @@ export default function Letras(props) {
                     props.settentativa([props.tentativa[0],])
                 }
             }
-
-            let acerto; //letras acertadas;
-            for(let k=0;k<props.palavra.lengt;k++){//verifica se o é jogo ganho
-                if(props.resposta.includes(props.palavra[k])){
-                    acerto++;
-                    if(acerto==props.palavra.lengt){
-                        props.setcontvitoria([true]);
-                        props.setresposta(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]);
-                    }
+            
+            if(props.palavra.includes(letraSelecionada)){
+                acerto++;
+                if(acerto==props.palavra.length){
+                    props.setcontvitoria([true]);
+                    props.setresposta(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]);
                 }
+                console.log(props.contvitoria);
             }
+            
 
             if(i==6){
                 props.setresposta(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]);
